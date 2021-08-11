@@ -82,7 +82,7 @@ const getToUpdate = async (req, res) => {
 const deleteRecord = async (req, res) => {
   const email = req.params.email;
   const emailExists = await Users.find({ email });
-  if (!emailExists) {
+  if (emailExists.length == 0) {
     return res.status(400).json({
       error: "error : some error occurred",
     });
