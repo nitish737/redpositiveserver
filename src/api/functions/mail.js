@@ -25,7 +25,7 @@ const sendMail = async (req, res) => {
 
     let mailOptions = {
       from: username,
-      to: "nitishnitishnitish111@gmail.com",
+      to: "info@redpositive.in",
       subject: "testing and testing",
       text: `name - ${data.name}
         email - ${data.email}
